@@ -1,244 +1,43 @@
-﻿# JuegoDeLaRuletaProbabilidad
+# Juego de la Ruleta - Probabilidad y Estadística
 
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage{geometry}
-\usepackage{fancyhdr}
-\usepackage{titlesec}
-\usepackage{parskip}
-\usepackage{url}
+Este proyecto es un análisis detallado del juego de la ruleta americana desde la perspectiva de la probabilidad y la estadística. A través de diversos cálculos y simulaciones, se exploran las probabilidades y estrategias involucradas en el juego, destacando la ventaja que tiene la casa sobre los jugadores.
 
-\geometry{a4paper, margin=1in}
+## Autores
 
-\author{
-    Santiago Ávila Torruco (Ingeniería en Ciberseguridad) \\
-    Benjamín Higareda Mendoza (Ingeniería Mecatrónica) \\
-    Jorge Iván Jiménez Reyes (Ingeniería en Ciberseguridad) \\
-    Julián López Valencia (Ingeniería Mecánica) \\
-    Alejandra Muñoz Guillén (Ingeniería Mecatrónica/Mecánica)
-}
-\date{02 de julio de 2024 \\ Facultad de Ingeniería \\ Universidad Panamericana}
+- Santiago Ávila Torruco (Ingeniería en Ciberseguridad)
+- Benjamín Higareda Mendoza (Ingeniería Mecatrónica)
+- Jorge Iván Jiménez Reyes (Ingeniería en Ciberseguridad)
+- Julián López Valencia (Ingeniería Mecánica)
+- Alejandra Muñoz Guillén (Ingeniería Mecatrónica/Mecánica)
 
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[R]{\raisebox{0pt}[0pt][0pt]{\includegraphics[height=1.2cm]{Logo_de_la_Universidad_Panamericana.svg.png}}}
-\fancyfoot[C]{\thepage}
+## Fecha
 
-\renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0.5pt}
+02 de julio de 2024
 
-\titlespacing*{\section}
-{0pt}{6.5ex plus 1ex minus .2ex}{5.3ex plus .2ex}
-\titlespacing*{\subsection}
-{0pt}{6.25ex plus 1ex minus .2ex}{4.5ex plus .2ex}
-\titlespacing*{\subsubsection}
-{0pt}{6.25ex plus 1ex minus .2ex}{4.5ex plus .2ex}
+## Universidad
 
-\begin{document}
+Facultad de Ingeniería, Universidad Panamericana
 
-\begin{titlepage}
-    \centering
-    \vspace*{2cm}
+## Contenidos
 
-    \includegraphics[width=0.3\textwidth]{Logo_de_la_Universidad_Panamericana.svg.png}
+El proyecto incluye:
 
-    \vspace{1.5cm}
+1. **Introducción**: Contexto del juego de la ruleta y su relevancia en estudios de probabilidad y estadística.
+2. **Objetivo**: Analizar las probabilidades y estrategias de juego en la ruleta americana.
+3. **Hipótesis**: La presencia de las casillas 0 y 00 afecta significativamente las probabilidades de ganar.
+4. **Marco Teórico**: Explicación detallada del juego y las apuestas posibles.
+5. **Desarrollo**: Cálculos probabilísticos y estadísticos para diferentes escenarios en la ruleta.
+6. **Conclusiones**: Resumen de los resultados obtenidos y su interpretación.
+7. **Bibliografía**: Fuentes utilizadas para la elaboración del proyecto.
 
-    {\LARGE \textbf{PROBABILIDAD Y ESTADÍSTICA}}
-    \vspace{1cm}
+## Requisitos
 
-    \rule{\linewidth}{0.5mm} \\[0.5cm]
-    {\Huge {JUEGO DE RULETA EN UN CASINO}}\\[0.5cm]
-    \rule{\linewidth}{0.5mm}
+- LaTeX para compilar el documento principal.
+- Herramientas de Git para la gestión de versiones.
 
-    \vspace{1.5cm}
+## Compilación
 
-    \textbf{Nombres:}
+Para compilar el documento principal en LaTeX, asegúrate de tener instalado un compilador de LaTeX (por ejemplo, TeX Live, MiKTeX) y ejecuta el siguiente comando en la terminal:
 
-    \vspace{1cm}
-
-    \begin{tabbing}
-        \hspace{6cm} \= \kill
-        Santiago Ávila Torruco \> (Ingeniería en Ciberseguridad) \\
-        Benjamín Higareda Mendoza \> (Ingeniería Mecatrónica) \\
-        Jorge Iván Jiménez Reyes \> (Ingeniería en Ciberseguridad) \\
-        Julián López Valencia \> (Ingeniería Mecánica) \\
-        Alejandra Muñoz Guillén \> (Ingeniería Mecatrónica/Mecánica)
-    \end{tabbing}
-
-    \vfill
-
-    \textbf{Fecha:} 02 de julio de 2024
-
-    \vspace{0.5cm}
-
-    \textbf{FACULTAD DE INGENIERÍA}
-
-    \vspace{0.5cm}
-
-    \textbf{UNIVERSIDAD PANAMERICANA}
-
-\end{titlepage}
-
-\section*{Introducción}
-Todos hemos experimentado situaciones donde el azar juega un papel crucial: decidir quién empieza un partido con una moneda al aire o lanzar dados en un juego de mesa para determinar el próximo movimiento. Estos momentos aparentemente simples nos llevan a calcular probabilidades de forma intuitiva sin siquiera pensar en términos matemáticos. De manera similar, la ruleta en los casinos representa un entorno donde el azar y las decisiones estratégicas se entrelazan de manera intrigante.
-
-La ruleta va más allá de ser solo un juego de azar en los casinos; es un campo de estudio fascinante para la probabilidad y la estadística. Este proyecto se sumerge en un análisis detallado de diversos aspectos fundamentales del juego, explorando desde la probabilidad de atinar a un número específico hasta la distribución de colores y complejas combinaciones. Cada giro de la ruleta es un experimento único donde convergen el azar y las matemáticas, permitiéndonos estudiar fenómenos como la ocurrencia de secuencias específicas de resultados, la frecuencia esperada de eventos como obtener tres rojos consecutivos, o la probabilidad de que una serie de tiradas resulte en una proporción determinada de eventos como negros o impares.
-
-Con su rueda giratoria y múltiples opciones de apuesta, la ruleta proporciona un terreno fértil para aplicar conceptos probabilísticos como un espacio muestral, variables aleatorias, distribución binomial, entre otros. A través de este estudio, no solo buscamos desentrañar los patrones probabilísticos subyacentes en un entorno de apuestas, sino también demostrar cómo estos principios matemáticos pueden arrojar luz sobre los fenómenos aleatorios y las dinámicas de juego en un contexto controlado.
-
-En resumen, este estudio no solo busca profundizar en la comprensión teórica de la ruleta desde una perspectiva probabilística, sino también aplicar estos principios matemáticos para entender mejor los mecanismos del azar y desarrollar estrategias informadas en un entorno donde cada giro de la rueda desafía nuestras expectativas.
-
-\section*{Objetivo}
-Analizar las probabilidades y estrategias de juego en la ruleta americana considerando la ventaja para la casa y las diferentes apuestas posibles, lo que permitirá explorar en profundidad las probabilidades de ganar, evaluar estrategias de apuestas y comprender cómo la presencia de las casillas 0 y 00 afecta las posibilidades de los jugadores.
-
-\section*{Hipótesis}
-La presencia de las casillas 0 y 00 afecta significativamente las probabilidades de ganar en la ruleta, lo que causará que nunca estés en igualdad de condiciones con la casa y, por lo tanto, pierdas más dinero del que puedes llegar a ganar.
-
-\section*{Marco Teórico}
-La ruleta es uno de los juegos más populares y emblemáticos del casino. Este juego combina el azar, emociones y matemáticas. Estas características hacen que este juego resulte en un tema digno para estudios de probabilidad y estadística.
-
-En este caso profundizaremos acerca de la ruleta americana. Esta ruleta se distingue de su contraparte, la ruleta europea, que a diferencia de la ruleta americana sólo cuenta con un 0, mientras que la americana cuenta con un 0 y 00 (lo que incrementa ligeramente la ventaja de la casa). Entre las dos ruletas sólo existe dicha diferencia, por lo cual la forma de jugar en ambas es casi idéntica.
-
-Dentro de la ruleta americana se encuentran 38 casillas: los números del 1 al 36, un 0 y un 00. Ahora que conocemos la estructura básica de la ruleta debemos adentrarnos a cómo se juega dicho juego, ya que existen varios factores que pueden determinar el monto de la paga y el riesgo que conlleva hacer cada apuesta.
-
-Al iniciar una ronda los jugadores deben colocar una o múltiples fichas donde desean realizar su apuesta, las cuales se dividen en apuestas internas y externas.
-
-\subsection*{Apuestas Internas}
-Los jugadores pueden colocar fichas en un número específico (apuesta directa), en la línea entre dos números (apuesta dividida), en la esquina que conecta cuatro números (apuesta de esquina), en la línea superior de una fila de tres números (apuesta de línea) o en la línea superior de dos filas adyacentes (apuesta de calle).
-
-\subsection*{Apuestas Externas}
-Este tipo de apuestas se colocan en áreas designadas fuera de los números individuales. Entre estas se encuentran apuestas como rojo o negro, par o impar, alto (19-36) o bajo (1-18), docenas (primeros del 1 al 12, segundos del 13 al 24 y terceros del 25 al 36).
-
-Una vez que todas las apuestas han sido colocadas, la persona encargada de la ruleta gira esta misma en una dirección y lanza una bola pequeña en la dirección opuesta. Eventualmente la bola pierde velocidad y cae en una de las 38 casillas numeradas. Cuando la bola se detiene en una casilla, el número y color correspondiente se anuncian como el resultado de la tirada. Todas las apuestas ganadoras se pagan según las probabilidades establecidas y todas las apuestas perdedoras se retiran de la mesa.
-
-\section*{Teoría Matemática Detrás de la Ruleta}
-Si estudiamos la ruleta desde el punto de vista matemático nos daremos cuenta de que cualquier apuesta es un experimento con dos posibles resultados: ganar y perder, donde la probabilidad de acertar cada número es la misma, independientemente de los números que elijamos, ya que todos los números tienen la misma probabilidad de salir. Además, cada tiro no depende del anterior y, por lo tanto, no importa el número que haya salido antes. En este escenario ideal, el número de aciertos para una serie de tiros sigue una distribución binomial \(B(n, p)\) donde \(n\) es el número de tiradas y \(p\) la probabilidad de acertar la apuesta.
-
-Después de comprender que cada tiro no depende del anterior, nuestro siguiente enfoque debería ser en percatarnos del papel que tiene el cero y el doble cero en el juego. Estos números se encuentran en la rueda de la ruleta
-
- y en la mesa de apuestas, los cuales son de color verde y se sitúan junto a los números rojos y negros del 1 al 36. La presencia del cero y el doble cero en la ruleta tiene un impacto significativo en las probabilidades de ganar y en las estrategias de apuestas que revisaremos más adelante.
-
-Siendo conscientes de los componentes de la ruleta y de la ventaja que tiene la casa, es importante finalmente conocer las estadísticas y probabilidades de ganar en la ruleta americana y, por lo tanto, saber las estadísticas y probabilidades de pagos en esta misma.
-
-Para un número único (Straight Up), las probabilidades de obtener el resultado correcto es de \( \frac{1}{38} \), por lo cual la casa premia con 35 fichas a 1.
-Para dos números (Split), la apuesta se coloca entre 2 números adyacentes con \( \frac{2}{38} \) de ganar en cada giro, la cual premia con 17 fichas a 1.
-Para tres números (Street), la apuesta se colocará al final de una fila de 3 números, con \( \frac{3}{38} \) de ganar, la cual premia con 11 fichas a 1.
-Para cuatro números (Corner/Square), la apuesta se coloca en el punto donde hay 4 números en la mesa, con probabilidad de \( \frac{4}{38} \) en cada giro, por lo que premia con 8 fichas a 1.
-Para Rojo/Negro, donde hay 18 números rojos y 18 negros, además de dos casillas de banca, con probabilidad de \( \frac{18}{38} \) la cual premia con 1 a 1 ficha. Lo mismo aplica para par o impar, 1-18 y 19-36.
-Para la docena se trata de acertar en qué docena estará el número ganador. El paño se divide en 3 docenas, por lo tanto al apostar se juega a 12 números. El pago es 2 a 1.
-
-Después de ver cómo premian y las probabilidades que una persona tiene de ganar en este juego, mucha gente lo que piensa es apostar a las que parece que tienen más probabilidades de salir que de no salir. Por ejemplo, las dos docenas, por lo que tendríamos 65.79\% de posibilidades de ganar una ficha frente a una posibilidad de perder una ficha de 34.21\%. Pero, como las ganancias y pérdidas no son iguales (2 a 1), si igualamos fichas, el 65.79\% de las veces ganaremos una ficha mientras que el 34.21\% de las veces perderemos una ficha.
-
-Entonces lo que muchas veces se busca hacer es combinar posibilidades para así minimizar las pérdidas lo cual tampoco es recomendable porque al hacer dos jugadas simultáneas en la misma ruleta, realmente se están haciendo apuestas que son independientes entre ellas lo que sería igual que realizarlas en ruletas diferentes pues la esperanza matemática es la misma; las jugadas se premian individualmente, y al final si una jugada no es rentable ni en una ruleta ni en la otra, mucho menos puede serlo dentro de la misma ruleta.
-
-De esta misma manera y basándonos en la probabilidad y estadística, buscaremos analizar el cómo la casa siempre gana, por lo que el jugador estará en desventaja ante las diferentes apuestas que decida hacer.
-
-\section*{Desarrollo}
-En esta sección se presentan los cálculos probabilísticos y estadísticos relacionados con la ruleta americana, basados en el análisis teórico previo.
-
-\subsection*{1. Probabilidad de Atinarle a un Número}
-A Atinarle a un número \\
-\[ P(A)= \frac{1}{38} = 0.0263 = 2.63\% \]
-
-\subsection*{2. Probabilidad de Atinarle a Color Negro}
-A Atinarle al color negro \\
-\[ P(A)= \frac{18}{38} = 0.4736 = 47.36\% \]
-
-\subsection*{3. Probabilidad de Atinarle a Tercia Baja}
-A Atinarle a la tercia baja \\
-\[ P(A)= \frac{12}{38} = 0.3157 = 31.57\% \]
-
-\subsection*{4. Probabilidad de Atinarle a 3 Rojos Consecutivos}
-A Atinarle a un rojo \\
-\[ P(A)= \frac{18}{38} = 0.4736 = 47.36\% \]
-B Salgan 3 rojos consecutivos \\
-\[ P(B)=P(A) \times P(A) \times P(A)= \left( \frac{18}{38} \right)^3 = 0.1062 = 10.62\% \]
-
-\subsection*{5. Probabilidad de que de los Siguientes 20 Tiros, 8 Sean Negros}
-X VA discreta para la probabilidad de obtener un negro \\
-\[ x=8 \]
-\[ n=20 \]
-\[ p=\frac{18}{38} \]
-\[ q=\frac{20}{38} \]
-\[ b(x;n;p)= \binom{n}{x} p^x q^{n-x} \]
-\[ P(x=8)=b(8;20;\frac{18}{38})=\binom{20}{8} \left( \frac{18}{38} \right)^8 \left( \frac{20}{38} \right)^{12} \approx 0.1442 = 14.42\% \]
-
-\subsection*{6. Probabilidad de que de los Siguientes 10 Tiros 3 Sean Tercia Baja, 6 Tercia Media y 1 Tercia Alta}
-\[ x1 = \text{VA discreta para obtener tercia baja} \]
-\[ x2 = \text{VA discreta para obtener tercia media} \]
-\[ x3 = \text{VA discreta para obtener tercia alta} \]
-\[ n=10 \]
-\[ p1 = \frac{12}{38} \]
-\[ p2 = \frac{12}{38} \]
-\[ p3 = \frac{12}{38} \]
-\[ f(x1,x2,x3;p1,p2,p3;n) = \frac{n!}{(x1!)(x2!)(x3!)} p1^{x1} p2^{x2} p3^{x3} \]
-\[ f(3,6,1;\frac{12}{38},\frac{12}{38},\frac{12}{38};10) = \frac{10!}{(3!)(6!)(1!)} \left( \frac{12}{38} \right)^3 \left( \frac{12}{38} \right)^6 \left( \frac{12}{38} \right)^1 \approx 0.0082 = 0.82\% \]
-
-\subsection*{7. Función de Probabilidad y Distribución Acumulada para, en 2 Tiros, Obtener Pares}
-X VA discreta para el número de pares obtenidos
-
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{c|c|c|c}
-        S & PcPc & PPc & PcP & PP \\
-        \hline
-        x & 0 & 1 & 1 & 2 \\
-        f(x) & \(\frac{10}{361}\) & \(\frac{90}{361}\) & \(\frac{90}{361}\) & \(\frac{81}{361}\) \\
-        F(x) & \(\frac{10}{361}\) & \(\frac{190}{361}\) & \(\frac{280}{361}\) & 1 \\
-    \end{tabular}
-    \caption{Función de probabilidad y distribución acumulada para obtener pares en 2 tiros}
-\end{table}
-
-\subsection*{8. Estadística descriptiva para 30 Tiros en una Ruleta}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{estadistica_descriptiva.png}
-    \caption{Estadística descriptiva para 30 tiros en una ruleta}
-\end{figure}
-
-\subsection*{9. Intervalo de Confianza para la Media de Tiros}
-Para calcular el intervalo de confianza para la media de tiros, utilizamos la siguiente información:
-
-\begin{itemize}
-    \item Desviación estándar \( s = 11.22 \)
-    \item Tamaño de Población \( n = 30 \)
-    \item Media Muestral \( \bar{x} = 13.67 \)
-    \item Intervalo de confianza: 95\%
-    \item Z para \( \alpha/2 = 0.025 \) es 1.96
-    \item Error estándar: \( E = 1.96 \left( \frac{11.22}{\sqrt{30}} \right) \approx 4.015 \)
-    \item Intervalo de confianza: \( 13.67 \pm 4.015 \)
-\end{itemize}
-
-El intervalo de confianza para la media de tiros es: \( (9.655, 17.685) \)
-
-\newpage
-\section*{Conclusiones}
-En conclusión, este proyecto ha permitido explorar
-
- de manera exhaustiva las probabilidades y estrategias en el juego de la ruleta americana, destacando la ventaja inherente que tiene la casa sobre los jugadores. A través de los cálculos realizados, se ha demostrado que las probabilidades de éxito en las diferentes apuestas están significativamente inclinadas a favor del casino.
-
-El análisis de las probabilidades individuales revela que la probabilidad de atinarle a un número específico es extremadamente baja, con solo un 2.63\% de posibilidades. Del mismo modo, la probabilidad de acertar el color negro es de 47.36\%, mientras que la de atinarle a la tercia baja es de 31.57\%. Estos cálculos ponen de manifiesto las bajas probabilidades de éxito en las apuestas más comunes, subrayando la ventaja estadística de la casa.
-
-Además, al analizar la probabilidad de obtener tres rojos consecutivos, se encontró que esta es de apenas 10.62\%, lo que nuevamente destaca la dificultad de predecir resultados en la ruleta. Incluso cuando se combinan diferentes apuestas para tratar de minimizar pérdidas, como se explicó en los cálculos de probabilidad de obtener ciertos resultados en varios tiros, las probabilidades siguen favoreciendo a la casa.
-
-El cálculo de la probabilidad de que, de los siguientes 10 tiros, 3 sean tercia baja, 6 tercia media y 1 tercia alta resultó ser de 0.82\%, evidenciando nuevamente la dificultad de predecir múltiples resultados específicos en el juego. De manera similar, la probabilidad de obtener pares en dos tiros y las distribuciones acumuladas también mostraron resultados poco favorables para los jugadores.
-
-Finalmente, el intervalo de confianza calculado para la media de tiros en la ruleta, basado en una muestra de 30 tiros, nos permitió establecer un rango en el cual se espera que se encuentre la verdadera media de la población. Este análisis proporciona una comprensión más profunda de la variabilidad inherente en el juego y subraya la naturaleza impredecible de la ruleta.
-
-En resumen, este proyecto reafirma que, aunque la ruleta puede ser un juego emocionante y atractivo, las probabilidades están diseñadas para asegurar que el casino tenga una ventaja matemática sobre los jugadores. Por lo tanto, es fundamental que los jugadores sean conscientes de estas probabilidades y tomen decisiones informadas al participar en este tipo de juegos de azar.
-
-\newpage
-\section*{Bibliografía}
-Ethier, S. N. (2010). \textit{The Doctrine of Chances: Probabilistic Aspects of Gambling}. Springer.
-
-How to Play Online Roulette. (s. f.). How To Play Online Roulette. \url{https://www.pokerstars.com/es-419/casino/how-to-play/roulette/?no_redirect=1}
-
-Damian, \& Damian. (2020, 11 noviembre). Tipos de apuesta en la ruleta: una guía práctica. TyN Magazine. \url{https://tynmagazine.com/tipos-de-apuesta-en-la-ruleta-una-guia-practica/}
-
-Guía de juego Ruleta - caliente. (s. f.). Caliente. \url{https://calientecasino.com.mx/mesas/ruleta/guia-de-juego-ruleta/}
-
-\end{document}
-```
+```bash
+pdflatex main.tex
